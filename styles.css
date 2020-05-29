@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+header {
+    width: 940px;
+    margin: 30px auto;
+}
+header a img {
+    margin-right: 8.7%;
+}
+header a {
+    font-size: 16px;
+    color: #111111;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    margin-right: 2.1%;
+    vertical-align: middle;
+}
+
+.ativa {
+    font-weight: bold;
+}
+
+#conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+#conteudo .banner {
+    width: 940px;
+    height: 366px;
+    background-color: #FBDFDB;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#conteudo .banner .content-banner {
+    text-align: left;
+    width: 316px;
+    height: 84px;
+    margin: 120px 50px;
+}
+
+#conteudo .banner .content-banner h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    color: #111111;
+}
+
+#conteudo .banner .content-banner p {
+    opacity: 0.7;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #000000;
+    line-height: 28px;
+}
+
+#conteudo .banner .imagem-banner img {
+    margin-left: 180px;
+    margin-top: 65px;
+}
+
+/* mais acessadas */
+
+#conteudo h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #553434;
+    margin-top: 4.5%;
+}
+
+#conteudo .receitas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    position: relative;
+    height: 100%;
+    margin-top: 1.8%;
+}
+
+#conteudo .receitas2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    position: relative;
+    height: 100%;
+    margin-top: 4.5%;
+}
+
+.receita {
+    cursor: pointer;
+}
+
+.receita h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #111111;
+    margin-top: 10px;
+}
+
+.receita p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #777777;
+    margin-top: 5px;
+}
+
+.receita img {
+    width: 100%;
+    border-radius: 10%;
+}
+
+/* === Sobre === */
+
+#conteudo .sobre p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    margin-top: 1.8%;
+}
+
+#conteudo .sobre h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+}
+
+#conteudo .sobre h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #111111;
+    margin-top: 2.7%;
+}
+
+/* === footer === */
+
+footer {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    background-color: #EEEEEE;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #999999;
+    padding-top: 25px;
+    margin-top: 4.0%;
+}
+
+/* === MODAL === */
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.modal {
+    width: 600px;
+    height: 500px;
+    background: white;
+    position: relative;
+    margin: 25vh auto;
+    border-radius: 3%;
+}
+
+.modal .close-modal {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #999999;
+    position: absolute;
+    right: 42%;
+    bottom: 25px;
+    cursor: pointer;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+iframe {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    display: block;
+}
+
+.modal-image {
+    width:90%;
+    margin:auto;
+}
+
+.modal-image img{
+    width: 100%;
+    margin-top: 6%;
+    border-radius: 3%;
+}
+
+.modal-content {
+    margin: auto;
+    width: 300px;
+    height: 100px;
+}
+
+.modal-content.active {
+    visibility: visible;
+}
+
+.modal-overlay .modal-content h2 {
+    margin-top: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+    text-align: center;
+}
+
+.modal-overlay .modal-content p {
+    margin-top: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #777777;
+    text-align: center;
+}
