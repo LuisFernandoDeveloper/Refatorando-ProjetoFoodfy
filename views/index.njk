@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "layout.njk" %}
+
+    {% block head %}
     <title>Foodfy - home</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <a href="/">
-            <img src="img/logo.png">
-        </a>
-        <a href="/about">Sobre</a>
-        <a href="/recipes">Receitas</a>
-    </header>
+    {% endblock %}
+
+    
+    {% block content %}}
     <section id="conteudo">
         <div class="banner">
             <div class="content-banner">
@@ -23,7 +15,7 @@
                     do mundo inteiro.</p>
             </div>
             <div class="imagem-banner">
-                <img src="img/chef.png" alt="Chef">
+                <img src="/img/chef.png" alt="Chef">
             </div>            
         </div>
         <h3>Mais acessadas</h3>
@@ -68,8 +60,4 @@
 
         </div>
     </section>
-    <footer>
-        Todos os direitos reservados. receitas Foodfy
-    </footer>
-</body>
-</html>
+    {% endblock %}
