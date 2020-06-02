@@ -23,7 +23,21 @@ server.get('/about', (req, res) => {
 })
 
 server.get('/recipes', (req, res) => {
-    res.render('recipes')
+    res.render('recipes', { recipes })
+})
+
+server.get('/recipe', (req, res) => {
+    const id = req.query.id
+    
+    const recipe = recipes.find(function(recipe){
+        if(recipe.id == id){
+            return true
+        }
+    })
+    if(!recipe){
+        return res.send("Receita não encontrada")
+    }
+    return res.render("recipe", {recipe})
 })
 
 server.use(function(req, res){

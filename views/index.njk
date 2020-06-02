@@ -1,26 +1,33 @@
 {% extends "layout.njk" %}
 
-    {% block head %}
+{% block head %}
     <title>Foodfy - home</title>
-    {% endblock %}
+{% endblock %}
 
-    
-    {% block content %}}
+{% block header %}
+    <header>
+        <a href="/">
+            <img src="/img/logo.png">
+        </a>
+        <a href="/" class="ativa">Home</a>
+        <a href="/about">Sobre</a>
+        <a href="/recipes">Receitas</a>
+    </header>
+{% endblock %}
+
+{% block content %}}
     <section id="conteudo">
         <div class="banner">
             <div class="content-banner">
                 <h1>As melhores receitas</h1>
-                <p>Aprenda a construir os melhores pratos
-                    com receitas criadas por profissionais
-                    do mundo inteiro.</p>
+                <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
             </div>
             <div class="imagem-banner">
                 <img src="/img/chef.png" alt="Chef">
-            </div>            
+            </div>
         </div>
         <h3>Mais acessadas</h3>
         <div class="receitas">
-            
 
             <div class="receita">
                 <img src="img/burger.png" alt="Triplo bacon burger">
@@ -60,4 +67,4 @@
 
         </div>
     </section>
-    {% endblock %}
+{% endblock %}

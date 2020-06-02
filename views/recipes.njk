@@ -1,90 +1,42 @@
 {% extends "layout.njk" %}
 
-    {% block head %}
-        <title>Foodfy - Receitas</title>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet">
-    {% endblock %}
+{% block head %}
+    <title>Foodfy - Receitas</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
 
-    {% block content %}
+{% block header %}
+
+    <header>
+        <a href="/">
+            <img src="/img/logo.png">
+        </a>
+        <a href="/">Home</a>
+        <a href="/about">Sobre</a>
+        <a href="/recipes" class="ativa">Receitas</a>
+    </header>
+
+{% endblock %}
+
+{% block content %}
     <section id="conteudo">
-        
-        <div class="receitas2">            
 
-            <div class="receita" id="burger.png">
-                <img src="/img/burger.png" alt="Triplo bacon burger">
-                <h4>Triplo bacon burger</h4>
-                <p>por Jorge Relato</p>
-            </div>
+        <div class="receitas2">
 
-            <div class="receita" id="pizza.png">
-                <img src="/img/pizza.png" alt="Pizza 4 estações">
-                <h4 class="tituloContent">Pizza 4 estações</h4>
-                <p>por Fabiana Melo</p>
-            </div>
+            {% for recipe in recipes %}
 
-            <div class="receita" id="espaguete.png">
-                <img src="/img/espaguete.png" alt="Espaguete ao alho">
-                <h4>Espaguete ao alho</h4>
-                <p>por Júlia Kinoto</p>
-            </div>
+                <div class="receita" id="{{recipe.id}}">
+                    <img src="{{recipe.image}}" alt="{{recipe.title}}">
+                    <div class="modal-content">
+                        <h4>{{recipe.title}}</h4>
+                        <p>por
+                            {{recipe.author}}</p>
+                    </div>
+                </div>
 
-            <div class="receita" id="lasanha.png">
-                <img src="/img/lasanha.png" alt="Lasanha mac n`cheese">
-                <h4>Lasanha mac n`cheese</h4>
-                <p>por Juliano Vieira</p>
-            </div>
-
-            <div class="receita" id="doce.png">
-                <img src="/img/doce.png" alt="Docinhos pão-do-céu">
-                <h4>Docinhos pão-do-céu</h4>
-                <p>por Ricardo Golvea</p>
-            </div>
-
-            <div class="receita" id="asinhas.png">
-                <img src="/img/asinhas.png" alt="Asinhas de frango ao barbecue">
-                <h4>Asinhas de frango ao barbecue</h4>
-                <p>por Vania Steroski</p>
-            </div>
-
-            <div class="receita" id="burger.png">
-                <img src="/img/burger.png" alt="Triplo bacon burger">
-                <h4>Triplo bacon burger</h4>
-                <p>por Jorge Relato</p>
-            </div>
-
-            <div class="receita" id="pizza.png">
-                <img src="/img/pizza.png" alt="Pizza 4 estações">
-                <h4>Pizza 4 estações</h4>
-                <p>por Fabiana Melo</p>
-            </div>
-
-            <div class="receita" id="espaguete.png">
-                <img src="/img/espaguete.png" alt="Espaguete ao alho">
-                <h4>Espaguete ao alho</h4>
-                <p>por Júlia Kinoto</p>
-            </div>
-
-            <div class="receita" id="lasanha.png">
-                <img src="/img/lasanha.png" alt="Lasanha mac n`cheese">
-                <h4>Lasanha mac n`cheese</h4>
-                <p>por Juliano Vieira</p>
-            </div>
-
-            <div class="receita" id="doce.png">
-                <img src="/img/doce.png" alt="Docinhos pão-do-céu">
-                <h4>Docinhos pão-do-céu</h4>
-                <p>por Ricardo Golvea</p>
-            </div>
-
-            <div class="receita" id="asinhas.png">
-                <img src="/img/asinhas.png" alt="Asinhas de frango ao barbecue">
-                <div class="modal-content">
-                    <h4>Asinhas de frango ao barbecue</h4>
-                    <p>por Vania Steroski</p>
-                </div>                
-            </div>
+            {% endfor %}
 
         </div>
     </section>
-    {% endblock %}}
+    <script src="scripts.js"></script>
+{% endblock %}}
