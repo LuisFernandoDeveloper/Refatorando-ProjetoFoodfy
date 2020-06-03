@@ -19,30 +19,37 @@
 {% block content %}
 
     <section id="conteudo">
-            <div class="receitas3">
+        <div class="receitaesp" id="{{recipe.id}}">
+            <img src="{{recipe.image}}" alt="{{recipe.title}}"/>
+            <h1>{{recipe.title}}</h1>
+            <p class="author">por
+                {{recipe.author}}</p>
 
-                <div class="receitaesp" id="{{recipe.id}}">
-                    <img src="{{recipe.image}}" alt="{{recipe.title}}"/>
-                    <h1>{{recipe.title}}</h1>
-                    <p class="author">por {{recipe.author}}</p>
-                
-                    <h2>Ingredientes</h2>
-                    <ul>
+            <h2>Ingredientes<a class="btnE">ESCONDER</a></h2>
+            <div class="detalhes">
+                <ul>
                     {% for ingredient in recipe.ingredients %}
                         <li>{{ingredient}}</li>
                     {% endfor %}
-                    </ul>
+                </ul>
+            </div>
 
-                    <h2>Modo de preparo</h2>
-                    <ul>
+            <h2>Modo de preparo<a class="btnE">MOSTRAR</a>
+            </h2>
+            <div class="detalhes">
+                <ul>
                     {% for prep in recipe.preparation %}
                         <li>{{prep}}</li>
                     {% endfor %}
-                    </ul>
-
-                    <h2>Informações adicionais</h2>
-                    <p>{{recipe.information}}</p>
-                
+                </ul>
             </div>
-        </section>
-    {% endblock %}
+
+            <h2>Informações adicionais<a class="btnE">ESCONDER</a>
+            </h2>
+            <div class="detalhes">
+                <p>{{recipe.information}}</p>
+            </div>
+        </div>
+    </section>
+    <script src="scripts2.js"></script>
+{% endblock %}
